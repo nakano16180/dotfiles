@@ -1,0 +1,42 @@
+[username]
+show_always = true
+
+[hostname]
+ssh_only = false
+suffix = "⟫"
+
+[directory]
+truncation_length = 8
+truncate_to_repo = false
+
+[time]
+disabled = false
+format = "[ %T ]"
+
+[battery]
+charging_symbol = "⚡️"
+discharging_symbol = "💀"
+
+[[battery.display]]  # "bold red" style when capacity is between 0% and 10%
+threshold = 10
+style = "bold red"
+
+[[battery.display]]  # "bold yellow" style when capacity is between 10% and 30%
+threshold = 30
+style = "bold yellow"
+
+[env_var]
+variable = "SHELL"
+default = "unknown shell"
+
+[git_status]
+conflicted = "🏳"
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
+untracked = "🤷‍"
+stashed = "📦"
+modified = "📝"
+staged = '[++\($count\)](green)'
+renamed = "👅"
+deleted = "🗑"
