@@ -3,7 +3,6 @@ show_always = true
 
 [hostname]
 ssh_only = false
-suffix = "⟫"
 
 [directory]
 truncation_length = 8
@@ -11,7 +10,8 @@ truncate_to_repo = false
 
 [time]
 disabled = false
-format = "[ %T ]"
+format = '🕙[\[ $time \]]($style) '
+time_format = "%T"
 
 [battery]
 charging_symbol = "⚡️"
