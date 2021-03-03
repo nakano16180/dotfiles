@@ -122,6 +122,16 @@ setxkbmap jp
 source $HOME/.cargo/env
 eval "$(starship init bash)"
 
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+export PIPENV_VENV_IN_PROJECT=true
+export PIPENV_PYTHON=$PYENV_ROOT/shims/python
+eval "$(pipenv --completion)"
+
 export EDITOR=gedit
 eval "$(direnv hook bash)"
 
@@ -129,8 +139,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export PIPENV_VENV_IN_PROJECT=true
-eval "$(pipenv --completion)"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 ## CUDA paths
 export PATH=/usr/local/cuda-10.0/bin:/usr/local/cuda-10.1/NsightCompute-2019.1${PATH:+:${PATH}}
@@ -156,19 +165,9 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/build-tools
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/kaito/.sdkman"
-[[ -s "/home/kaito/.sdkman/bin/sdkman-init.sh" ]] && source "/home/kaito/.sdkman/bin/sdkman-init.sh"
-
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 source /opt/ros/eloquent/setup.bash
 #source /home/kaito/robotx_setup/ansible/../robotx_ws/install/local_setup.bash
 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
+
