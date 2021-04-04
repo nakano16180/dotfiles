@@ -1,0 +1,7 @@
+[user]
+	name = nakano16180
+	email = nakano16180@gmail.com
+[merge]
+	ff = false
+[pull]
+	ff = only
