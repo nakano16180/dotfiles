@@ -119,7 +119,8 @@ fi
 export HISTTIMEFORMAT='%F %T '
 setxkbmap jp
 
-source $HOME/.cargo/env
+eval "$(gh completion -s bash)"
+
 eval "$(starship init bash)"
 
 export PYENV_ROOT="$HOME/.pyenv"
@@ -135,39 +136,32 @@ eval "$(pipenv --completion)"
 export EDITOR=gedit
 eval "$(direnv hook bash)"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+#export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 ## CUDA paths
-export PATH=/usr/local/cuda-10.0/bin:/usr/local/cuda-10.1/NsightCompute-2019.1${PATH:+:${PATH}}
-export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-export TF_FORCE_GPU_ALLOW_GROWTH=true
+#export PATH=/usr/local/cuda-10.0/bin:/usr/local/cuda-10.1/NsightCompute-2019.1${PATH:+:${PATH}}
+#export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+#export TF_FORCE_GPU_ALLOW_GROWTH=true
 
 
 ## java
-JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")
-export JAVA_HOME
-PATH=$PATH:$JAVA_HOME/bin
-export PATH
+#JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")
+#export JAVA_HOME
+#PATH=$PATH:$JAVA_HOME/bin
+#export PATH
 
 # mujoco
-export MUJOCO_PY_MUJOCO_PATH=~/.mujoco/mujoco200_linux
-export MUJOCO_PY_MJKEY_PATH=~/.mujoco/mjkey.txt
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/kaito/.mujoco/mujoco200_linux/bin
+#export MUJOCO_PY_MUJOCO_PATH=~/.mujoco/mujoco200_linux
+#export MUJOCO_PY_MJKEY_PATH=~/.mujoco/mjkey.txt
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/kaito/.mujoco/mujoco200_linux/bin
 
 # android studio
-export ANDROID_SDK_ROOT=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin
-export PATH=$PATH:$ANDROID_SDK_ROOT/build-tools
-export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
-export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-source /opt/ros/eloquent/setup.bash
-#source /home/kaito/robotx_setup/ansible/../robotx_ws/install/local_setup.bash
-
-
+#export ANDROID_SDK_ROOT=$HOME/Android/Sdk
+#export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin
+#export PATH=$PATH:$ANDROID_SDK_ROOT/build-tools
+#export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+#export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
