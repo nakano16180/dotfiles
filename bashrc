@@ -130,17 +130,17 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 export PIPENV_VENV_IN_PROJECT=true
-export PIPENV_PYTHON=$PYENV_ROOT/shims/python
+export PIPENV_DEFAULT_PYTHON_VERSION=$PYENV_ROOT/shims/python
 eval "$(pipenv --completion)"
 
 export EDITOR=gedit
 eval "$(direnv hook bash)"
 
-#export NVM_DIR="$HOME/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-#export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 ## CUDA paths
 #export PATH=/usr/local/cuda-10.0/bin:/usr/local/cuda-10.1/NsightCompute-2019.1${PATH:+:${PATH}}
