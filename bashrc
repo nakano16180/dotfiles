@@ -142,6 +142,8 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+#source /opt/ros/noetic/setup.bash
+#source /opt/ros/foxy/setup.bash
 ## CUDA paths
 #export PATH=/usr/local/cuda-10.0/bin:/usr/local/cuda-10.1/NsightCompute-2019.1${PATH:+:${PATH}}
 #export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
