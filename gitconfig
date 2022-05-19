@@ -5,3 +5,5 @@
 	ff = false
 [pull]
 	ff = only
+[core]
+	autocrlf = input

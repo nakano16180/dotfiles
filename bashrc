@@ -142,8 +142,11 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-#source /opt/ros/noetic/setup.bash
-#source /opt/ros/foxy/setup.bash
+export PATH=/usr/local/cuda-11.6/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-11.6/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/nakano/.mujoco/mujoco210/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia
+
 ## CUDA paths
 #export PATH=/usr/local/cuda-10.0/bin:/usr/local/cuda-10.1/NsightCompute-2019.1${PATH:+:${PATH}}
 #export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
@@ -155,11 +158,6 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 #export JAVA_HOME
 #PATH=$PATH:$JAVA_HOME/bin
 #export PATH
-
-# mujoco
-#export MUJOCO_PY_MUJOCO_PATH=~/.mujoco/mujoco200_linux
-#export MUJOCO_PY_MJKEY_PATH=~/.mujoco/mjkey.txt
-#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/kaito/.mujoco/mujoco200_linux/bin
 
 # android studio
 #export ANDROID_SDK_ROOT=$HOME/Android/Sdk
