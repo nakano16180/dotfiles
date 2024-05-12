@@ -12,6 +12,6 @@ $ sudo apt install rcm
 ```
 
 ```
-$ git clone git://github.com/nakano16180/dotfiles ~/.dotfiles
+$ git clone https://github.com/nakano16180/dotfiles.git ~/.dotfiles
 $ env RCRC=$HOME/.dotfiles/rcrc rcup 
 ```
