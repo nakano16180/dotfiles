@@ -4,3 +4,6 @@
     exact = true
     stripComponents = 1
     refreshPeriod = "168h"
+["fonts"]
+    type = "git-repo"
+    url = "https://github.com/powerline/fonts.git"
