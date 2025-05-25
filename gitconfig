@@ -1,8 +1,12 @@
 [user]
 	name = nakano16180
 	email = nakano16180@gmail.com
-[merge]
-	ff = false
+[credential "https://github.com"]
+	helper = 
+	helper = !/home/linuxbrew/.linuxbrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/home/linuxbrew/.linuxbrew/bin/gh auth git-credential
 [pull]
 	ff = only
 [core]
