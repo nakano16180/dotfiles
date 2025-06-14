@@ -11,3 +11,5 @@
 	ff = only
 [core]
 	autocrlf = input
+[push]
+	autoSetupRemote = true
