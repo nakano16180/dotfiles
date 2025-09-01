@@ -165,3 +165,4 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia
 #export PATH=$PATH:$ANDROID_SDK_ROOT/build-tools
 #export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 #export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+. "/home/nakano16180/.deno/env"
