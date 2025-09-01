@@ -11,5 +11,6 @@
 	ff = only
 [core]
 	autocrlf = input
+	pager = less -F -X
 [push]
 	autoSetupRemote = true
